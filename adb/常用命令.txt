@@ -1,0 +1,37 @@
+命令
+
+
+解bl锁|fastboot flashing unlock
+(按照手机界面提示，fastboot自两行英文变为多行.按住开机键加音量上键强制重启
+重启第一屏出现三行英文警告.手机将会恢复出厂设置并重启到语言选择界面
+至此，你已经将手机BL解锁成功,如果手机没有被格式化.即代表解锁失败.请进入深度测试重新操作)
+回锁|fastboot flashing lock
+
+
+adb
+
+列出adb设备 |adb devices
+
+重启adb设备 |asb reboot
+
+重启ADB设备到fastboot | adb reboot bootloader  \  adb reboot fastboot 
+
+重启ADB设备到rec |adb reboot recovery
+
+fastboot 
+
+列出fastboot设备 |fastboot devices
+
+重启fastboot设备 |fastboot reboot
+
+重启fastboot设备到fastboot |fastboot reboot-bootloader
+
+查看解锁状态 |fastboot oem device-info
+
+刷入recovery |fastboot flash recovery recovery.img        
+
+刷入boot |fastboot flash boot boot.img
+
+刷写分区 |fastboot flash 分区名称 镜像文件名.img
+
+刷入vbmeta |fastboot --disable-verity --disable-verification flash vbmeta vbmeta.img
